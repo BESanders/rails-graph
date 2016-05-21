@@ -13,8 +13,8 @@ $.ajax({
 
 function draw(data) {
   var color = d3.scale.category20b();
-  var width= 420,
-      barHeight= 20;
+  var width= 400,
+      barHeight= 40;
 
   var x= d3.scale.linear()
       .range([0, width])
@@ -35,7 +35,7 @@ function draw(data) {
     .attr("width", x)
     .attr("height", barHeight - 1)
     .style("fill", function(d) {
-      return color(d);
+      return color(d)
     });
 
   bar.append("text")

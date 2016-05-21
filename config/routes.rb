@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  get 'graph/index'
-  get 'graph/data', :defaults => { :format => 'json'}
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  #root 'welcome#index'
+  root 'states#index'
+
+  resources :states, only: [:index, :show]
+
+  get 'graph/index'
+  get 'graph/data', :defaults => { :format => 'json'}  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

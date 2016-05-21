@@ -115,6 +115,12 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sequel (4.34.0)
+    sequel-rails (0.9.12)
+      actionpack (>= 3.2.0)
+      activemodel
+      railties (>= 3.2.0)
+      sequel (>= 3.28, < 5.0)
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -150,6 +156,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sequel-rails
   spring
   sqlite3
   turbolinks
